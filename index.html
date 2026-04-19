@@ -104,8 +104,21 @@
     <div class="header">
       <h1>Yaradan Məmmədov Tofiq</h1>
       <p>Sadə xəbər və məlumat saytı</p>
-    </div>
+<div id="saat" style="font-size:28px; font-weight:bold; text-align:center; margin-top:15px;></div>
+<script>
+function vaxtiGoster() {
+  const indi = new Date();
 
+  let saat = indi.getHours().toString().padStart(2, '0');
+  let dəqiqə = indi.getMinutes().toString().padStart(2, '0');
+  let saniyə = indi.getSeconds().toString().padStart(2, '0');
+
+  document.getElementById("saat").innerHTML = saat + ":" + dəqiqə + ":" + saniyə;
+}
+
+setInterval(vaxtiGoster, 1000);
+vaxtiGoster();
+</script>
     <div class="news-box">
       <h2>Texnologiya Dünyasında Yenilik</h2>
       <p>Bu il texnologiya sahəsində bir çox yeniliklər baş verir. Yeni kompüterlər, telefonlar və oyun sistemləri insanların diqqətini çəkir. Süni intellekt proqramları isə daha sürətli inkişaf edir.</p>
